@@ -27,10 +27,9 @@ public class Main {
                 );
             }
     }
+/* Mortgage Calculator */
 
     public static void mortgageCalculator(Scanner scanner) {
-
-
 
         System.out.println("Please enter the principal amount.");
             int principal = scanner.nextInt();
@@ -64,4 +63,13 @@ public class Main {
         );
 
     }
+
+    public static void compoundCalculator(Scanner scanner) {
+
+    }
+
+    public static void pvCalculator(Scanner scanner) {
+
+    }
+
 }
