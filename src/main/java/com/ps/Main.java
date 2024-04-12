@@ -33,7 +33,13 @@ public class Main {
                 monthlyPayment
         ));
 
+        /* Total interest payment */
 
+        double cInterest = monthlyPayment*numPayments-principal;
+
+        System.out.println(String.format("Your total interest is $%.2f",
+                cInterest
+        ));
 
     }
 }
