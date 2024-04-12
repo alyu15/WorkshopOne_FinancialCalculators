@@ -3,6 +3,9 @@ package com.ps;
 import java.util.*;
 
 public class Main {
+
+    /* Calculator 1: Mortgage Calculator */
+
     public static void main(String[] args) {
 
  Scanner scanner = new Scanner(System.in);
@@ -11,11 +14,24 @@ public class Main {
             int principal = scanner.nextInt();
 
         System.out.println("Please enter the interest rate.");
-            double interestRate = scanner.nextDouble();
+            double percentage = scanner.nextDouble();
+                double interestRate = percentage/100;
+                double mInterest = interestRate / 12;
 
         System.out.println("Please enter in the loan length in years.");
-            int loanLength = scanner.nextInt();
+            float loanLength = scanner.nextFloat();
+            float numPayments = loanLength * 12;
 
+/* Monthly mortgage payment = Principal*((minterest*(1+minterest)^(numpayments))/(1+mrate)^(numpayments)-1*/
+
+        double expression = Math.pow(1+mInterest,numPayments);
+        double mPayment1 = principal*mInterest*expression;
+        double mPayment2 = Math.pow(1+mInterest,numPayments)-1;
+        double monthlyPayment = mPayment1/mPayment2;
+
+        System.out.println(String.format("Your expected monthly payment is $%.2f",
+                monthlyPayment
+        ));
 
 
 
