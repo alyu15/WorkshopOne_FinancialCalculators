@@ -100,7 +100,15 @@ public class Main {
 
     public static void pvCalculator(Scanner scanner) {
 
-        System.out.println("Please");
+        System.out.println("Please enter the amount of each payment.");
+            float mPayout = scanner.nextFloat();
+
+        System.out.println("Please enter the interest rate.");
+            float expInterestRate = scanner.nextFloat();
+
+        System.out.println("Please enter in the number of years in which payments will be made.");
+
+        /* Present Value = Periodic payment * ((1-(1 + interestRate)^-number of periods)/interestRate) */
 
 
     }
