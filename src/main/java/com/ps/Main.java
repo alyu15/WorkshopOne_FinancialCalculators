@@ -50,7 +50,7 @@ public class Main {
         double mPayment2 = Math.pow(1+mInterest,numPayments)-1;
         double monthlyPayment = mPayment1/mPayment2;
 
-        System.out.printf("Your expected monthly payment is $%.2f%n",
+        System.out.printf("Your expected monthly payment is $%.2f.%n",
                 monthlyPayment
         );
 
@@ -58,11 +58,13 @@ public class Main {
 
         double cInterest = monthlyPayment*numPayments-principal;
 
-        System.out.printf("Your total interest is $%.2f%n",
+        System.out.printf("Your total interest is $%.2f.",
                 cInterest
         );
 
     }
+
+/* Daily Compound Interest Calculator */
 
     public static void compoundCalculator(Scanner scanner) {
 
@@ -76,20 +78,30 @@ public class Main {
         System.out.println("Please enter in the number of years you would like to invest for.");
             int numYears = scanner.nextInt();
 
-/* Final Amount = Principal * [1+interestRate/365]^365*time */
+/* Final Amount = Principal * (1+interestRate/365)^365*time */
 
-        double inner = 1+(interestRate/365);
+        double innerBracket = 1+(interestRate/365);
         float occurrence = numYears*365;
-        double exp = Math.pow(inner, occurrence);
+        double exp = Math.pow(innerBracket, occurrence);
         double futureValue = principal*exp;
 
 
-        System.out.printf("Your Certificate of Deposit (CD)'s ending balance will be $%f",
+        System.out.printf("Your Certificate of Deposit (CD)'s ending balance will be $%.2f.%n",
                 futureValue
         );
+
+        double totalInterest = futureValue - principal;
+
+        System.out.printf("Your total interest earned is $%.2f.",
+                totalInterest
+        );
+
     }
 
     public static void pvCalculator(Scanner scanner) {
+
+        System.out.println("Please");
+
 
     }
 
