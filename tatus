@@ -1,0 +1,47 @@
+[33mcommit 5d4707d13a8e4170010de4f093fdc76237f5eba1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Alisha Yu <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 19:01:05 2024 -0400
+
+    updated, added static for last two calcs
+
+[33mcommit e7ec3e79a4652c5b830b1a687ae01eca82a824dc[m
+Author: Alisha Yu <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 18:57:04 2024 -0400
+
+    options added; need to add 2 calc
+
+[33mcommit 57f6a32cc4f5879371efe822da73598b2c497746[m
+Author: Alisha Yu <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 16:29:29 2024 -0400
+
+    finished compounded interest
+
+[33mcommit 36dda4cb119d1b08c08eb1b8ff3dc393aebd0a76[m
+Author: Alisha Yu <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 15:13:25 2024 -0400
+
+    completed monthlypayment
+
+[33mcommit 1ef5e63cdd6406eea502c5533934189787a8223d[m
+Author: Alisha Yu <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 12:57:21 2024 -0400
+
+    added in principal, interest rate, and loan length
+
+[33mcommit d1af6c304cd8d228c104071d4df706a98af32057[m
+Author: Alisha <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 11:08:37 2024 -0400
+
+    first commit
+
+[33mcommit 4361d333e71efd75e40e802abfb40693252c047a[m
+Author: Alisha <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 11:05:13 2024 -0400
+
+    first commit
+
+[33mcommit 23664fda561f07b35bef06aa177381dfdc2caa5b[m
+Author: Alisha <alisha.yu15@gmail.com>
+Date:   Fri Apr 12 10:54:31 2024 -0400
+
+    first commit
