@@ -6,26 +6,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please select which calculator you would like to use:");
-        System.out.println("Mortgage, Daily Compound Interest, or Present Value");
+        while (true) {
+            System.out.println("Please select which calculator you would like to use:");
+            System.out.println("Mortgage, Daily Compound Interest, or Present Value");
             String calculator = scanner.nextLine();
 
             if (calculator.equals("Mortgage")) {
                 mortgageCalculator(scanner);
-            }
-            else if (calculator.equals("Daily Compound Interest")) {
+                break;
+            } else if (calculator.equals("Daily Compound Interest")) {
                 compoundCalculator(scanner);
-            }
-            else if (calculator.equals("Present Value")) {
+                break;
+            } else if (calculator.equals("Present Value")) {
                 pvCalculator(scanner);
+                break;
+            } else {
+                System.out.printf("%s is not recognized.\n",
+                        calculator);
             }
-            else {
-                System.out.printf("%s is not recognized. Please enter in one of the given options.",
-                calculator
-                );
-            }
+        }
     }
 /*  Mortgage Calculator */
 
@@ -114,12 +115,14 @@ public class Main {
 
         /* Present Value = Periodic payment * ((1-(1 + interestRate)^-number of periods)/interestRate) */
 
-              double exp = Math.pow(1+mRate,-period);
-              double inner = 1-exp;
-              double division = inner/mRate;
-              double presentValue = mPayout*division;
+            double exp = Math.pow(1+mRate,-period);
+            double inner = 1-exp;
+            double division = inner/mRate;
+            double presentValue = mPayout*division;
 
-        System.out.println("Your present value of your annuity is $" + presentValue);
+        System.out.printf("Your present value of your annuity is $%.2f.",
+                presentValue
+        );
 
     }
 
