@@ -16,25 +16,6 @@ Error Message:
 ![Error](https://github.com/alyu15/WorkshopOne_FinancialCalculators/assets/166542449/4f1351b5-f272-45bb-bda8-5475e9006b47)
 
 Interesting Piece of Code:
+ ![Code](https://github.com/alyu15/WorkshopOne_FinancialCalculators/assets/166542449/e605384e-6d2b-4161-926f-a1738829ed94)
 
-while (true) {
-            System.out.println("Please select which calculator you would like to use:");
-            System.out.println("Mortgage, Daily Compound Interest, or Present Value");
-            String calculator = scanner.nextLine();
-
-            if (calculator.equals("Mortgage")) {
-                mortgageCalculator(scanner);
-                break;
-            } else if (calculator.equals("Daily Compound Interest")) {
-                compoundCalculator(scanner);
-                break;
-            } else if (calculator.equals("Present Value")) {
-                pvCalculator(scanner);
-                break;
-            } else {
-                System.out.printf("%s is not recognized.\n",
-                        calculator);
-            }
-        }
-        
 I found this piece of code interesting because it took me so long to try and figure out how to loop the user back in case they entered in something that was not one of the three choices. And when I finally did figure it out, I realized all I needed to do was add in a "while" and "break" conditional.
