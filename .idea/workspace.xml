@@ -22,12 +22,12 @@
     &quot;assignee&quot;: &quot;alyu15&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/alyu15/WorkshopOne_FinancialCalculators.git&quot;,
-    &quot;accountId&quot;: &quot;500d4b24-13db-4b65-8169-0230ea43429c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/alyu15/WorkshopOne_FinancialCalculators.git",
+    "accountId": "3b768cc5-de82-4ef6-adb7-0f31dbc1577c"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>

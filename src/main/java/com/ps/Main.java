@@ -27,7 +27,7 @@ public class Main {
                 );
             }
     }
-/* Mortgage Calculator */
+/*  Mortgage Calculator */
 
     public static void mortgageCalculator(Scanner scanner) {
 
@@ -64,7 +64,7 @@ public class Main {
 
     }
 
-/* Daily Compound Interest Calculator */
+/*  Daily Compound Interest Calculator */
 
     public static void compoundCalculator(Scanner scanner) {
 
@@ -97,7 +97,7 @@ public class Main {
         );
 
     }
-
+/*  Present Value Annuity Calculator */
     public static void pvCalculator(Scanner scanner) {
 
         System.out.println("Please enter the amount of each payment per month.");
@@ -105,25 +105,21 @@ public class Main {
 
         System.out.println("Please enter the interest rate.");
             float percentage = scanner.nextFloat();
-            float decimal = percentage/100;
-            double interestRate = decimal/365;
+            float interestRate = percentage/100;
+            float mRate = interestRate/12;
 
         System.out.println("Please enter in the number of years in which payments will be made.");
             float numYears = scanner.nextFloat();
-            double periods = numYears*12;
+            float period = numYears*12;
 
-        /* Present Value = Periodic payment * ((1-(1 + interestRate)^-number of periods)/interestRate) OR
-        PV = (Payment x (1 - ((1/(1+r)^n)/r )*/
+        /* Present Value = Periodic payment * ((1-(1 + interestRate)^-number of periods)/interestRate) */
 
-//        double pInterestRate = interestRate/periods;
-//        double inner = Math.pow(1+interestRate,-periods);
+              double exp = Math.pow(1+mRate,-period);
+              double inner = 1-exp;
+              double division = inner/mRate;
+              double presentValue = mPayout*division;
 
-            double denominator = Math.pow(1+decimal,periods);
-            double inner = 1/denominator;
-            double numerator = 1-inner;
-            double multiply = mPayout*numerator/interestRate;
-
-        System.out.println("Your present value of your annuity is $" + multiply);
+        System.out.println("Your present value of your annuity is $" + presentValue);
 
     }
 
