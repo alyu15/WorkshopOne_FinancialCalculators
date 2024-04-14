@@ -105,16 +105,25 @@ public class Main {
 
         System.out.println("Please enter the interest rate.");
             float percentage = scanner.nextFloat();
-            float interestRate = percentage/100;
+            float decimal = percentage/100;
+            double interestRate = decimal/365;
 
         System.out.println("Please enter in the number of years in which payments will be made.");
             float numYears = scanner.nextFloat();
-            double periods = numYears*365;
+            double periods = numYears*12;
 
-        /* Present Value = Periodic payment * ((1-(1 + interestRate)^-number of periods)/interestRate) */
+        /* Present Value = Periodic payment * ((1-(1 + interestRate)^-number of periods)/interestRate) OR
+        PV = (Payment x (1 - ((1/(1+r)^n)/r )*/
 
-        double pInterestRate = interestRate/periods;
-        double inner = Math.pow(1+interestRate,-periods);
+//        double pInterestRate = interestRate/periods;
+//        double inner = Math.pow(1+interestRate,-periods);
+
+            double denominator = Math.pow(1+decimal,periods);
+            double inner = 1/denominator;
+            double numerator = 1-inner;
+            double multiply = mPayout*numerator/interestRate;
+
+        System.out.println("Your present value of your annuity is $" + multiply);
 
     }
 
