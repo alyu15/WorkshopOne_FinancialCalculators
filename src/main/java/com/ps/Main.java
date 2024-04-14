@@ -44,8 +44,6 @@ public class Main {
             float loanLength = scanner.nextFloat();
             float numPayments = loanLength * 12;
 
-/* Monthly mortgage payment = Principal*((minterest*(1+minterest)^(numpayments))/(1+mrate)^(numpayments)-1*/
-
         double expression = Math.pow(1+mInterest,numPayments);
         double mPayment1 = principal*mInterest*expression;
         double mPayment2 = Math.pow(1+mInterest,numPayments)-1;
@@ -54,8 +52,6 @@ public class Main {
         System.out.printf("Your expected monthly payment is $%.2f.%n",
                 monthlyPayment
         );
-
-        /* Total interest payment */
 
         double cInterest = monthlyPayment*numPayments-principal;
 
@@ -79,8 +75,6 @@ public class Main {
         System.out.println("Please enter in the number of years you would like to invest for.");
             int numYears = scanner.nextInt();
 
-/* Final Amount = Principal * (1+interestRate/365)^365*time */
-
         double innerBracket = 1+(interestRate/365);
         float occurrence = numYears*365;
         double exp = Math.pow(innerBracket, occurrence);
@@ -99,6 +93,7 @@ public class Main {
 
     }
 /*  Present Value Annuity Calculator */
+
     public static void pvCalculator(Scanner scanner) {
 
         System.out.println("Please enter the amount of each payment per month.");
@@ -113,11 +108,9 @@ public class Main {
             float numYears = scanner.nextFloat();
             float period = numYears*12;
 
-        /* Present Value = Periodic payment * ((1-(1 + interestRate)^-number of periods)/interestRate) */
-
             double exp = Math.pow(1+mRate,-period);
-            double inner = 1-exp;
-            double division = inner/mRate;
+            double innerBracket = 1-exp;
+            double division = innerBracket/mRate;
             double presentValue = mPayout*division;
 
         System.out.printf("Your present value of your annuity is $%.2f.",
